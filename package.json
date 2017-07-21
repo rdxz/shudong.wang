@@ -1,0 +1,34 @@
+{
+  "name": "snuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "wangshudong <wsd312@163.com>",
+  "private": true,
+  "dependencies": {
+    "nuxt": "v0.10.7"
+  },
+  "scripts": {
+    "dev": "nodemon --exec node server.js",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "axios": "^0.16.2",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "html-minifier": "^3.5.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^4.1.1"
+  }
+}
