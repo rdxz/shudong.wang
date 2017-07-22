@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    hello 我是header页面
+   
   
   </div>
 </template>

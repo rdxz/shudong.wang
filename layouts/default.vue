@@ -1,6 +1,5 @@
 <template>
   <div>
-    哈哈哈
     <header-view></header-view>
     <Nav-view></Nav-view>
     <nuxt></nuxt>
