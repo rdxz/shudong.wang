@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "build": "cross-env NODE_ENV=production nuxt build",
+    "start": "cross-env NODE_ENV=production node server.js",
     "generate": "nuxt generate"
   },
   "devDependencies": {

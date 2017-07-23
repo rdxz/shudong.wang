@@ -3,7 +3,7 @@ const app  =  require('express')()
 const host = process.env.HOST || '127.0.0.1'
 console.log(process.env.HOST);
 console.log(process.env);
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3000
 process.noDeprecation = true
 
 app.set('port', port)
