@@ -1,6 +1,6 @@
 const Nuxt = require('nuxt')
 const app  =  require('express')()
-const host = process.env.HOST || '120.27.245.209'
+const host = process.env.HOST || '192.168.199.215'
 const port = process.env.PORT || 3000
 process.noDeprecation = true
 

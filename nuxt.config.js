@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const apiConfig = require('./api.config')
 module.exports = {
   /*
   ** Headers of the page
@@ -51,6 +52,13 @@ module.exports = {
       })
     }
   },
+  dev: (process.env.NODE_ENV !== 'production'),
+  env: {
+    baseUrl: apiConfig.baseUrl
+  },
+  plugins: [
+    { src: '~plugins/axios.js' }
+  ],
   // plugins: [
   //   // {src: '~/plugins/jquery', ssr: false}
   // ],
