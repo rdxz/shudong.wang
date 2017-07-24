@@ -24,9 +24,7 @@ export const actions = {
   // 全局服务初始化
   nuxtServerInit(store, { params, route, isServer, req }) {
     const initAppData = [
-      // 配置数据
       store.dispatch('loadArticles'),
-      store.dispatch('loadArticleDetail'),
     ]
     return Promise.all(initAppData)
   },
