@@ -20,6 +20,16 @@ export const state = () => ({
 
 // // global actions
 export const actions = {
+
+  // 全局服务初始化
+  nuxtServerInit(store, { params, route, isServer, req }) {
+    const initAppData = [
+      // 配置数据
+      store.dispatch('loadArticles'),
+      store.dispatch('loadArticleDetail'),
+    ]
+    return Promise.all(initAppData)
+  },
 // 获取文章列表
   loadArticles({ commit }, params = { page: 1 }) {
 
