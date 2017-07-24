@@ -18,24 +18,24 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <nuxt-link :to="'/'" class="nav-link" exact >
+            <nuxt-link :to="'/blog/'" class="nav-link" exact >
               首页
             </nuxt-link>
           </li>
-          <li class="dropdown">
+         <!--  <li class="dropdown">
             <nuxt-link :to="'/learn'" class="nav-link" > 学习</nuxt-link>
-          </li>
+          </li> -->
           <li class="dropdown">
-            <nuxt-link :to="'/blog'" class="nav-link" > 博客</nuxt-link>
+            <nuxt-link :to="'/blog/'" class="nav-link" > 博客</nuxt-link>
           </li>
-          <li class="dropdown">
+         <!--  <li class="dropdown">
             <nuxt-link :to="'/project'" class="nav-link" > 项目</nuxt-link>
-          </li>          
+          </li>   -->        
 
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <nuxt-link :to="'/project'" class="nav-link" > 读书笔记</nuxt-link>
-          </li>
-          
+          </li> -->
+
         </ul>
       </div>
     </div>

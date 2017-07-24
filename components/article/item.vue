@@ -5,22 +5,18 @@
       <div class="container">
 		    <div class="row">
 		        <div class="col-md-9 margin-b-40">
-		            <div class="post-full" v-for="item in article">
-		                <div class="blog-meta">
-		                    <h2><a href="#" v-html="item.title.rendered">{{item.title.rendered}}</a></h2>
-		                    <ul class="list-inline">
-		                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-		                        <li><i class="fa fa-calendar-check-o"></i> 22 Feb. 2016</li>
-		                        <li><i class="fa fa-tag"></i> <a href="#">Startups</a></li>
-		                    </ul>
-		                </div>
-		                <div class="post-content" v-html="item.content.rendered">
-		                    <p v-html>
-		                      {{item.content.rendered}}
-		                    </p>
-		                    <a href="#" class="btn btn-lg btn-skin">Continue...</a>
-		                </div>
-		            </div>
+	                <div class="blog-meta">
+	                    <h2><a :href="'/article/'+item.id" v-html="item.title.rendered">{{item.title.rendered}}</a></h2>
+	                    <ul class="list-inline">
+	                        <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+	                        <li><i class="fa fa-calendar-check-o"></i> {{item.date}}</li>
+	                        <li><i class="fa fa-tag"></i> <a href="#">Startups</a></li>
+	                    </ul>
+	                </div>
+	                <div class="post-content">
+	                    <p v-html="item.excerpt.rendered"></p>
+	                    <a :href="'/article/'+item.id" class="btn btn-lg btn-skin">阅读更多</a>
+	                </div>
 		        </div>
 		    </div>
 		</div>
@@ -43,8 +39,8 @@
       // ListHeader
     },
     props: {
-      article: {
-        type: Array
+      item: {
+        type: Object
       }
     },
     computed: {
@@ -60,7 +56,7 @@
     },
     methods: {
     	getData(){
-    		console.log(this.article);
+    		// console.log(this.item);
     		// this.article = this.article[0]
     	}
     }
