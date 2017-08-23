@@ -25,13 +25,14 @@ export const state = () => ({
   }
 })
 
+const ARTICLE = '/wp-json/wp/v2/posts/'
 
 // // global actions
 export const actions = {
   // 获取文章详情
   loadArticleDetail({ commit }, params = {}) {
     // commit('article/REQUEST_DETAIL')
-    return Service.get(`/wp-json/wp/v2/posts/${ params.article_id }`)
+    return Service.get(ARTICLE + params.article_id)
     .then(response => {
     	console.log(response);
       // const success = Object.is(response.statusText, 'OK') && Object.is(response.data.code, 1)
